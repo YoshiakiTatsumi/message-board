@@ -5,9 +5,10 @@
 
   <div class="panel-body">
     <% @messages.each do |message| %>
-      <span class="label label-info"><%= message.name %></span>
+      <span class="label label-info"><%= message.name %></span>&ensp;
+        <%= message.age%> 才&ensp;
         <%= message.body %>
-        (<%= link_to "edit" , edit_message_path(message) %>
+        (<%= link_to "edit" , edit_message_path(message) %>&ensp;
          <%= link_to "destroy" , message , method: :delete, data: { confirm: '削除してもよろしいですか？' } %>
         )
       <br>
